@@ -1,6 +1,6 @@
 using MediatR;
 
-namespace AlphaWebAPI.Commands.Product;
+namespace Application.Commands.Products;
 
 public class DeleteProductCommand: IRequest<int>
 {

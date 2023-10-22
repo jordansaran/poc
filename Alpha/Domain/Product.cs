@@ -7,7 +7,6 @@ namespace Domain;
 [Table("Product")]
 public class Product : GenericEntity
 {
-    
     public Product(string reference, string name, UnitType unit, decimal price, decimal costPrice, decimal purchasePrice)
     {
         Reference = reference;
@@ -17,15 +16,7 @@ public class Product : GenericEntity
         CostPrice = costPrice;
         PurchasePrice = purchasePrice;
     }
-
-    public enum UnitType
-    {
-        Caixa,
-        Metro,
-        Unidade,
-        Conjunto
-    }
-    
+ 
     [Required]
     [Index("ProductReferenceIndex")]
     [MaxLength(16, ErrorMessage = "O tamanho máximo é {16} caracteres")]
@@ -50,4 +41,12 @@ public class Product : GenericEntity
     [Required]
     public decimal PurchasePrice { get; set; }
     
+}
+
+public enum UnitType
+{
+    Caixa,
+    Metro,
+    Unidade,
+    Conjunto
 }

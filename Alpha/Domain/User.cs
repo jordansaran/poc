@@ -6,10 +6,6 @@ namespace Domain;
 [Table("User")]
 public class User
 {
-    public User()
-    {
-    }
-
     public User(string name, string email)
     {
         Name = name;

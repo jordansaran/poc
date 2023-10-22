@@ -1,6 +1,5 @@
-using AlphaWebAPI.Commands.Product;
-using Application.Commands.Product;
-using Application.Queries.Product;
+using Application.Commands.Products;
+using Application.Queries.Products;
 using Domain;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;

@@ -1,15 +1,16 @@
 using MediatR;
+using Domain;
 
-namespace Application.Commands.Product;
+namespace Application.Commands.Products;
 
-public class CreateProductCommand : IRequest<Domain.Product>
+public class CreateProductCommand : IRequest<Product>
 {
     
     public string Reference { get; set; }
     
     public string Name { get; set; }
     
-    public Domain.Product.UnitType Unit { get; set; }
+    public UnitType Unit { get; set; }
     
     public decimal Price { get; set; }
     
@@ -17,7 +18,7 @@ public class CreateProductCommand : IRequest<Domain.Product>
     
     public decimal PurchasePrice { get; set; }
 
-    public CreateProductCommand(string reference, string name, Domain.Product.UnitType unit, decimal price, decimal costPrice, decimal purchasePrice)
+    public CreateProductCommand(string reference, string name, UnitType unit, decimal price, decimal costPrice, decimal purchasePrice)
     {
         Reference = reference;
         Name = name;

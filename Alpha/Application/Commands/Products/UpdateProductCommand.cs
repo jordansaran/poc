@@ -1,6 +1,7 @@
+using Domain;
 using MediatR;
 
-namespace Application.Commands.Product;
+namespace Application.Commands.Products;
 
 public class UpdateProductCommand : IRequest<int>
 {
@@ -9,7 +10,7 @@ public class UpdateProductCommand : IRequest<int>
     
     public string Name { get; set; }
     
-    public Domain.Product.UnitType Unit { get; set; }
+    public UnitType Unit { get; set; }
     
     public decimal Price { get; set; }
     
@@ -17,7 +18,7 @@ public class UpdateProductCommand : IRequest<int>
     
     public decimal PurchasePrice { get; set; }
 
-    public UpdateProductCommand(int id, string reference, string name, Domain.Product.UnitType unit, decimal price, decimal costPrice, decimal purchasePrice)
+    public UpdateProductCommand(int id, string reference, string name, UnitType unit, decimal price, decimal costPrice, decimal purchasePrice)
     {
         Id = id;
         Reference = reference;

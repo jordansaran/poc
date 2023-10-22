@@ -37,4 +37,9 @@ public abstract class GenericRepository<T> : IGenericRepository<T> where T : cla
     {
         _context.Set<T>().Update(entity);
     }
+
+    public async Task<int> Save()
+    {
+        return await _context.SaveChangesAsync();
+    }
 }

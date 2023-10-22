@@ -1,6 +1,6 @@
 using MediatR;
 
-namespace Application.Commands.User;
+namespace Application.Commands.Users;
 
 public class UpdateUserCommand : IRequest<int>
 {

@@ -7,4 +7,5 @@ public interface IGenericRepository<T> where T : class
     Task Add(T entity);
     void Delete(T entity);
     void Update(T entity);
+    Task<int> Save();
 }

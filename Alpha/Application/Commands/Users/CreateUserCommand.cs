@@ -1,8 +1,9 @@
+using Domain;
 using MediatR;
 
-namespace Application.Commands.User;
+namespace Application.Commands.Users;
 
-public class CreateUserCommand : IRequest<Domain.User>
+public class CreateUserCommand : IRequest<User>
 {
     public string Name { get; set; }
     public string Email { get; set; }
